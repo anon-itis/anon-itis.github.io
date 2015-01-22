@@ -47,8 +47,8 @@
                         <div class="likes">
                             <div class="date">{{ t.date*1000 | date:'yyyy-MM-dd HH:mm:ss' }}</div>
                             <div class="pull-right">
-                                <i class="fa fa-thumbs-o-up">2</i> |
-                                <i class="fa fa-thumbs-o-down">1</i>
+                                <i ng-class="{'blue':isCheck(t,0),'pointer':user}" ng-click="like(t,0)" class="fa fa-thumbs-o-up"> {{ t.likes.length||0 }}</i> |
+                                <i ng-class="{'blue':isCheck(t,1),'pointer':user}" ng-click="like(t,1)" class="fa fa-thumbs-o-down"> {{ t.dislikes.length||0 }}</i>
                             </div>
                         </div>
                     </div>
@@ -63,8 +63,8 @@
                                 <div class="likes">
                                     <div class="date" title="{{ comment.date*1000 | date:'HH:mm:ss' }}">{{ comment.date*1000 | date:'yyyy-MM-dd' }}</div>
                                     <div class="pull-right">
-                                        <i class="fa fa-thumbs-o-up">1</i> |
-                                        <i class="fa fa-thumbs-o-down">2</i>
+                                        <i ng-class="{'blue':isCheck(comment,0),'pointer':user}" ng-click="like(t,0,$index)" class="fa fa-thumbs-o-up"> {{ comment.likes.length||0 }}</i> |
+                                        <i ng-class="{'blue':isCheck(comment,1),'pointer':user}" ng-click="like(t,1,$index)" class="fa fa-thumbs-o-down"> {{ comment.dislikes.length||0 }}</i>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
             <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
 
             <script src="mine.min.js"></script>
-            <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter28035288 = new Ya.Metrika({id:28035288, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/28035288" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+            <!-- Yandex.Metrika counter -><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter28035288 = new Ya.Metrika({id:28035288, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/28035288" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
         </scripts>
     </body>
 </html>
