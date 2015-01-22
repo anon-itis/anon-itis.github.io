@@ -41,7 +41,10 @@
                     <img src="{{ t.anon?'http://hipics.ru/images/2015/01/15/anon95291.png':users(t.owner).photo_100 }}" alt="..." class="img-circle">
                 </a>
                 <div class="media-body">
-                    <h4 class="media-heading">{{ t.anon?'Аноним':users(t.owner).first_name + ' ' + users(t.owner).last_name }}</h4>
+                    <h4 class="media-heading">
+                        {{ t.anon?'Аноним':users(t.owner).first_name + ' ' + users(t.owner).last_name }}
+                        <i class="fa fa-close pull-right fa-fw" title="Удалить" ng-show="user == t.owner" ng-click="remove(t)"></i>
+                    </h4>
                     <div>
                         <div>{{ t.text }}</div>
                         <div class="likes">
@@ -57,7 +60,10 @@
                             <img src="{{ comment.anon?'http://hipics.ru/images/2015/01/15/anon95291.png':users(comment.owner).photo_100 }}" alt="..." class="img-circle">
                         </a>
                         <div class="media-body comment">
-                            <h4 class="media-heading">{{ comment.anon?(t.anon&&t.owner==comment.owner?'Автор':'Аноним'):users(comment.owner).first_name }}</h4>
+                            <h4 class="media-heading">
+                                {{ comment.anon?(t.anon&&t.owner==comment.owner?'Автор':'Аноним'):users(comment.owner).first_name }}
+                                <i class="fa fa-close pull-right fa-fw" title="Удалить" ng-show="user == comment.owner" ng-click="remove(t,$index)"></i>
+                            </h4>
                             <div>
                                 <div>{{ comment.text }}</div>
                                 <div class="likes">
