@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anon ITIS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="../mine.min.css" />
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h3 class="text-muted"><a href="/">AnonITIS</a></h3>
+            </div>
+            
+            <blockquote>
+                <p>Мы в итисе, врятли анонимность сохраниться надолго. Найдутся умельцы (точнее уже есть)</p>
+                <footer>Тимур Сагидуллов</footer>
+            </blockquote>
+            
+            <p>
+                Ну и флаг им в руки! Асимметричное шифрование id пользователя с последующим обёртыванием в хеш-функцию не оставляет никаких шансов на расшифровку вашим умельцам.
+            </p>
+            
+            <br/>
+            <hr/>
+            <br/>
+            
+            <blockquote>
+                <p>Если анонимно, то зачем там вход с вк?</p>
+                <footer>Ramis Aksakov</footer>
+            </blockquote>
+            
+            <p>
+                Не все хотят комментировать анонимно и даже подписанных постов не мало (полистай записи на стене в подслушано). А самый оптимальный оптимальный способ авторизовать пользователя - сделать это через ВК. Всё равно ведь в нём сидите.
+            </p>
+            
+            <br/>
+            <hr/>
+            <br/>
+            
+            <blockquote>
+                <p>Вопрос в гарантиях анонимности</p>
+                <footer>Kirill Erofeev</footer>
+            </blockquote>
+            
+            <div>
+                Немного об этом уже было в ответе на первый комментарий.
+            </div>
+            <div>
+                Помимо этого, есть ещё пара пунктов:
+                <ul>
+                    <li>
+                        отсутствие необходимости возвращать id пользователя компилятору/интерпретатору, а чеки производить можно и в зашифрованном виде, а чекать в свою очередь можно прямо в БД, позволяет не выдавать столь ценную информацию, как id/имя анонима, даже разработчикам.
+                    </li>
+                    <li>
+                        что касается асимметричного шифрования - закрытый ключ можно и потерять, ведь использоваться он не будет (дешифровка нам не нужна).
+                    </li>
+                    <li>
+                        конченые параноики могут договориться с общепризнанным доверенным лицом о получении открытого ключа и хранении/уничтожении закрытого ключа через него.
+                    </li>
+                </ul>
+            </div>
+            
+            <br/>
+            <hr/>
+            <br/>
+            
+            <blockquote>
+                <p>..но уверен, что отклика не найдет, имхо.<br/>
+По опыту могу сказать, что сторонние решения очень трудно привить людям. Когда есть ВК, всем будет лень пользоваться третьим сервисом.  Это применимо ко всем "заменителям услуг".</p>
+                <footer>Murad Khafizov</footer>
+            </blockquote>
+            
+            <div>
+                Для отправки анонимных постов Вы уже используете сторонний сервис и не "ленитесь". А с учётом ряда плюсов, таких как:
+                <ul>
+                    <li>
+                        Моментальная выгрузка в группу в ВК. Все посты также как и сейчас будут у подписчиков в ленте новостей
+                    </li>
+                    <li>
+                        Автоматическая выгрузка в группу в ВК. Нет админа/модератора, который вручную выкладывает в СВОБОДНОЕ время - нет простоя, какие тут случались
+                    </li>
+                    <li>
+                        Специализированность. У ask.fm и групп ВК другие задачи, соответственно и функционал под другое заточен. Так что это не "заменитель услуг"
+                    </li>
+                    <li>
+                        Целевой аудиторией будете Вы, поэтому сможете выдвигать свои идеи и предложения на рассмотрение.
+                    </li>
+                </ul>
+            </div>
+    
+            <blockquote>
+                <p>Необходимо придумать нечто кардинально новое, что действительно могло бы заставить людей встать с насиженного места и ежедневно посещать новинку.</p>
+                <footer>Murad Khafizov</footer>
+            </blockquote>
+            
+            <div>
+                Не все постоянно заходят в группу. Многим хватанет прочтения самого поста в ленте и посещения группы раз в неделю/месяц для прочтения комментариев. Тем более это можно организовать как приложение в самом ВК если уж западло выйти за его пределы.
+            </div>
+        </div>
+        
+        <scripts>
+            <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+            
+            <!-- Yandex.Metrika counter -><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter28035288 = new Ya.Metrika({id:28035288, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/28035288" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+        </scripts>
+    </body>
+</html>
