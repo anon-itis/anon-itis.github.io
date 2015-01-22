@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div ng-repeat="t in test | reverse" class="media">
-                <a class="media-left" href="#">
+                <a class="media-left">
                     <img src="{{ t.anon?'http://hipics.ru/images/2015/01/15/anon95291.png':users(t.owner).photo_100 }}" alt="..." class="img-circle">
                 </a>
                 <div class="media-body">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div ng-repeat="comment in t.comments" class="media">
-                        <a class="media-left" href="#">
+                        <a class="media-left">
                             <img src="{{ comment.anon?'http://hipics.ru/images/2015/01/15/anon95291.png':users(comment.owner).photo_100 }}" alt="..." class="img-circle">
                         </a>
                         <div class="media-body comment">
