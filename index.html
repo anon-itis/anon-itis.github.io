@@ -22,16 +22,16 @@
                 </nav>
                 <h3 class="text-muted">AnonITIS</h3>
             </div>
-            <div ng-show="user">
-                <textarea ng-model="newPost" class="form-control" rows="3"></textarea>
+            <div>
+                <textarea placeholder="{{ user?'Ну рассказывай':'Авторизуйся' + user + log(this) }}" ng-disabled="!user" ng-model="newPost" class="form-control" rows="3"></textarea>
                 <br/>
                 <div style="text-align:right; height:34px">
                     <span class="pull-right">
-                        <div ng-click="sendPost()" class="btn btn-primary">Отправить</div>
+                        <div ng-click="sendPost()" class="btn btn-primary" ng-disabled="!user">Отправить</div>
                     </span>
                     <span class="checkbox pull-right">
                         <label>
-                          <input type="checkbox" ng-model="newPostAnon"> Анонимно
+                          <input type="checkbox" ng-model="newPostAnon" ng-disabled="!user"> Анонимно
                         </label>
                     </span>
                 </div>
